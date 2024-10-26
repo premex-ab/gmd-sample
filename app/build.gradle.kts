@@ -37,7 +37,6 @@ android {
                         // in which case the managed device will use a 32 bit image.
                         // Not applicable to arm64 machines.
                         require64Bit = false
-                        additionalOptions = ["-no-window", "-no-audio"]
                     }
                 )
             }
