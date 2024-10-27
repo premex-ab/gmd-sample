@@ -1,0 +1,39 @@
+name: Pull request workflow
+
+on:
+  push:
+    branches:
+      - main
+
+# Ensures that only one deploy task per branch/environment will run at a time.
+concurrency:
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: mini
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+          lfs: true
+
+
+      - name: "Setup runner"
+        uses: ./.github/actions/prepare_runner
+        with:
+          check-kvm: true
+
+      - name: Check LFS usages
+        run: git lfs fsck
+
+
+      - name: Run Android Test
+        run: ./gradlew :app:pixel2api30DebugAndroidTest
