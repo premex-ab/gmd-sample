@@ -25,7 +25,6 @@ jobs:
           fetch-depth: '0'
           lfs: true
 
-
       - name: "Setup runner"
         uses: ./.github/actions/prepare_runner
         with:
@@ -34,6 +33,5 @@ jobs:
       - name: Check LFS usages
         run: git lfs fsck
 
-
       - name: Run Android Test
-        run: ./gradlew :app:pixel2api30DebugAndroidTest
+        run: ./gradlew :app:pixel2api30DebugAndroidTest --debug
