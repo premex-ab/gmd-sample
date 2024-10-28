@@ -18,6 +18,10 @@ runs:
       shell: bash
       run: whoami
 
+    - name: "RUNTIME_ARCH"
+      shell: bash
+      run: echo $RUNTIME_ARCH
+
     - name: Check if KVM is available with kvm-ok
       if: ${{ inputs.check-kvm == 'true' }}
       shell: bash
