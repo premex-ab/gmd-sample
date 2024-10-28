@@ -20,7 +20,7 @@ runs:
 
     - name: "party"
       shell: bash
-      run: ls
+      run: cat /shared/fest.txt
 
     - name: "RUNTIME_ARCH"
       shell: bash
