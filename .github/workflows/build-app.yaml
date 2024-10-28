@@ -34,4 +34,4 @@ jobs:
         run: git lfs fsck
 
       - name: Run Android Test
-        run: ./gradlew :app:pixel2api30DebugAndroidTest --debug
+        run: ./gradlew :app:pixel2api30DebugAndroidTest
