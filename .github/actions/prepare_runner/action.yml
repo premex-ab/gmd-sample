@@ -23,6 +23,10 @@ runs:
       shell: bash
       run: kvm-ok
 
+    - name: "ls kvm"
+      shell: bash
+      run: ls -al /dev/kvm
+
     - name: Check LFS usages
       shell: bash
       run: git lfs fsck
