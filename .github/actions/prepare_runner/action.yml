@@ -14,9 +14,9 @@ runs:
       shell: bash
       run: echo "The architecture of the runner is ${{ runner.os }}-$(uname -m)"
 
-    - name: "Docker TARGETARCH"
+    - name: "Whoami"
       shell: bash
-      run: echo "TARGETARCH is $TARGETARCH"
+      run: whoami
 
     - name: Check if KVM is available with kvm-ok
       if: ${{ inputs.check-kvm == 'true' }}
