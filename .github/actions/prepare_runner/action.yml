@@ -18,6 +18,10 @@ runs:
       shell: bash
       run: whoami
 
+    - name: "party"
+      shell: bash
+      run: cat /fest.txt
+
     - name: "RUNTIME_ARCH"
       shell: bash
       run: echo $RUNTIME_ARCH
