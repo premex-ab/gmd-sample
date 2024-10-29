@@ -56,3 +56,4 @@ runs:
       uses: premex-ab/setup-android@v4
       with:
         cmdline-tools-version: 12266719
+        packages: 'platform-tools'
