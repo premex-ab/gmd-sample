@@ -29,9 +29,9 @@ android {
                         // Use device profiles you typically see in Android Studio.
                         device = "Pixel 2"
                         // Use only API levels 27 and higher.
-                        apiLevel = 30
+                        apiLevel = 35
                         // To include Google services, use "google".
-                        systemImageSource = "google"
+                        systemImageSource = "google-atd"
                         //systemImageSource = "aosp-atd"
                         // Whether the image must be a 64 bit image. Defaults to false,
                         // in which case the managed device will use a 32 bit image.
